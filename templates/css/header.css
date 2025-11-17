@@ -1,0 +1,121 @@
+header {
+  margin: 15px 0px 0px 0px;
+  position: relative;
+}
+
+header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--line);
+}
+
+header .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header .logo img {
+  width: 80px;
+}
+
+header .logo div {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 0px 15px;
+  font-size: 14px;
+  color: var(--dark-text);
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+header .logo div:hover {
+  color: var(--primary-red);
+}
+
+header .logo p {
+  font-family: var(--basic-font);
+  margin: 0px 0px 0px 5px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav button {
+  background: none;
+  border: solid 2px var(--primary-red);
+  padding: 10px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+header nav button a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: var(--primary-red);
+  transition: color 0.5s ease;
+}
+
+header nav button:hover {
+  background-color: var(--primary-red);
+}
+
+header nav button a:hover {
+  color: var(--light-text);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px 0px 0px;
+}
+
+header nav ul li {
+  margin: 0px 10px 0px 0px;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--light-text);
+  transition: color 0.5s ease;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-red);
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-red);
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
