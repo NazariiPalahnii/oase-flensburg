@@ -86,13 +86,14 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 24px 12px;
-  width: 52%;
+  width: 50%;
 }
+
 
 /* Специфичный отступ для кнопки в hero */
 .hero-left .btn-primary {
   margin: 0;
-  width: auto;
+  width: 40%;
 }
 
 .main_h1 {
@@ -130,7 +131,7 @@
 .gallery,
 .events,
 .news {
-  margin-top: 120px;
+  margin-top: 150px;
 }
 
 .about_us_h2,
@@ -155,6 +156,7 @@
   margin-top: 10px;
 }
 
+
 .about_us_h2::after {
   width: 50%;
 }
@@ -176,7 +178,7 @@
 
 .news_title::after {
   width: 90%;
-  max-width: 400px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -351,9 +353,12 @@
 }
 
 .events_style img {
-  width: 230px;
+  width: 200px;
   border-radius: 10px;
-  margin: 0;
+}
+
+.events_image_wrapper {
+  width: 60%;
 }
 
 .party_style,
@@ -477,6 +482,11 @@
   .news_block > div {
     flex-basis: 100%;
   }
+
+  .events_image_wrapper {
+    width: 80%;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -527,6 +537,9 @@
   .main_h2 {
     font-size: 16px;
   }
+  .events_image_wrapper {
+    width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -551,6 +564,9 @@
     display: block;
     box-sizing: border-box;
   }
+    .events_image_wrapper {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -563,5 +579,8 @@
   .image.wide {
     grid-row: span 1;
     grid-column: span 1;
+  }
+  .events_image_wrapper {
+    width: 100%;
   }
 }
