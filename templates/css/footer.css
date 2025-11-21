@@ -1,0 +1,138 @@
+.site-footer {
+    margin: 150px 0px 0px 0px;
+    background: var(--background-darker);
+    color: var(--light-text);
+  flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-content-wrapper {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.footer-section {
+    flex: 1; 
+    padding: 0 15px;
+    min-width: 250px;
+}
+
+.footer-links .btn-primary a {
+    color: var(--primary-red);
+}
+
+.footer-links .btn-primary a:hover {
+    color: var(--light-text);
+}
+
+.footer-section p {
+    max-width: 100%;
+    color: var(--line);
+}
+
+.footer-section a {
+    color: var(--light-text);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: var(--primary-red);
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.logo__img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+
+/* ======================================================= */
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ (до 1024px) */
+/* ======================================================= */
+@media (max-width: 1024px) {
+    .footer-content-wrapper {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .footer-section {
+        flex: 0 0 calc(50% - 30px); 
+        margin-bottom: 30px;
+    }
+    
+    .footer-section:last-child {
+        flex: 0 0 calc(33% - 30px); 
+    }
+}
+
+
+/* ======================================================= */
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ (до 600px) */
+/* ======================================================= */
+@media (max-width: 600px) {
+    .site-footer {
+        margin-top: 50px;
+    }
+
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .footer-links .btn-primary {
+        display: block;
+        margin: 10px auto;
+        max-width: 80%;
+    }
+
+    .footer-contact a {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .footer-social .social-icons {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .footer-social p {
+        text-align: center;
+    }
+    
+    .logo__img {
+        max-width: 120px;
+    }
+    
+    .footer-bottom {
+        padding: 15px 0;
+    }
+}
