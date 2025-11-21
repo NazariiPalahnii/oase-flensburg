@@ -543,6 +543,9 @@
   .events_image_wrapper {
     width: 80%;
   }
+  .events_style {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
