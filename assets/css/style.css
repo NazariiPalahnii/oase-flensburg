@@ -441,6 +441,9 @@
 }
 
 @media (max-width: 992px) {
+  .container {
+    padding: 20px;
+  }
   .about_us-flex,
   .events_flex {
     flex-direction: column;
