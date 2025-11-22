@@ -1,19 +1,15 @@
-/* --- БАЗОВЫЕ НАСТРОЙКИ КОНТЕЙНЕРА --- */
 .cards-container {
   display: grid;
-  /* Адаптивные колонки, не меньше 300px */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  /* ВАЖНО: Это не дает соседним плиткам растягиваться по высоте */
   align-items: start;
 }
 
-/* --- КАРТОЧКА --- */
 .card {
-  background: #fff; /* Белый фон карточки */
+  background-color: var(--background-dark); /* Белый фон карточки */
   border-radius: 16px; /* Скругление углов */
   box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Легкая тень */
   overflow: hidden; /* Чтобы контент не вылезал за скругления */
