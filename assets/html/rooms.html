@@ -8,18 +8,224 @@
     <link rel="stylesheet" href="../css/rooms.css" />
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
+    <script src="https://kit.fontawesome.com/5bb575665e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="header-placeholder"></div>
 
-    <main></main>
-    
-    <div id="footer-placeholder"></div>
+    <main class="main">
+      <div class="cards-container container">
+        
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 1" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Уютная гостиная</h3>
+            <p class="card-desc">Светлая комната с минималистичным дизайном.</p>
+            
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
 
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Площадь: 25 м²<br />
+                - Окна: Панорамные<br />
+                - Мебель: Диван, кресло
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 2" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Студия Лофт</h3>
+            <p class="card-desc">Кирпичные стены и высокий потолок.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Интернет 1Гбит<br />
+                - Проектор<br />
+                - Звукоизоляция
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Grundriss-Raum-3132.png" alt="Raum 3" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Переговорная</h3>
+            <p class="card-desc">Идеально для встреч и совещаний.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Большой стол<br />
+                - 8 стульев<br />
+                - Флипчарт
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 4" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Зона отдыха</h3>
+            <p class="card-desc">Мягкие пуфы и приглушенный свет.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Кофемашина<br />
+                - Игровая приставка<br />
+                - Книги
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 5" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Офис Open Space</h3>
+            <p class="card-desc">Просторное помещение для команды.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - 10 рабочих мест<br />
+                - Принтер/Сканер<br />
+                - Личные шкафчики
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Grundriss-Raum-3132.png" alt="Raum 6" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Учебный класс</h3>
+            <p class="card-desc">Для проведения лекций и семинаров.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Парты и стулья<br />
+                - Маркерная доска<br />
+                - Проектор
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 7" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Кухня</h3>
+            <p class="card-desc">Полностью оборудованная кухня.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Холодильник<br />
+                - Микроволновка<br />
+                - Посуда
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 8" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Скайп-рум</h3>
+            <p class="card-desc">Маленькая комната для звонков.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Звукоизоляция<br />
+                - Удобное кресло<br />
+                - Столик для ноутбука
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" onclick="openLightbox(this)">
+            <span class="zoom-icon"><i class="fas fa-search"></i></span>
+            <img src="../img/Oase-Flensburg-Grundriss-Raum-3132.png" alt="Raum 9" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Архив</h3>
+            <p class="card-desc">Помещение для хранения документов.</p>
+            <div class="card-bottom">
+                <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="more-info">
+              <div class="more-info-inner">
+                <strong>Детали:</strong><br />
+                - Стеллажи<br />
+                - Сейф<br />
+                - Вентиляция
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoom" />
+      </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
     <script src="../js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/5bb575665e.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
