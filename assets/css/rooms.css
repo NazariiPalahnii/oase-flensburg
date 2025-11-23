@@ -1,112 +1,132 @@
+.main h1 {
+  text-align: center;
+  color: var(--light-text);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 30px;
+  position: relative;
+}
+
+.main h1::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  background: var(--primary-red);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
-  padding: 40px 20px;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: start;
 }
 
 .card {
-  background-color: var(--background-dark); /* Белый фон карточки */
-  border-radius: 16px; /* Скругление углов */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Легкая тень */
-  overflow: hidden; /* Чтобы контент не вылезал за скругления */
+  background-color: var(--background-dark);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee; /* Тонкая рамка */
+  border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Приподнимаем при наведении */
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* Тень становится глубже */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-red);
 }
 
-/* --- БЛОК С ФОТО --- */
 .card-image {
   position: relative;
   width: 100%;
-  height: 220px; /* Фиксированная высота фото */
-  cursor: pointer; /* Курсор в виде руки */
+  height: 200px;
+  cursor: pointer;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Фото заполняет блок, не искажаясь */
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
 .card-image:hover img {
-  transform: scale(1.08); /* Легкое увеличение фото при наведении */
+  transform: scale(1.08);
 }
 
-/* Иконка лупы на фото */
 .zoom-icon {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(0,0,0,0.5); /* Полупрозрачный фон */
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Скрыта по умолчанию */
-  transition: opacity 0.3s;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
   z-index: 2;
-  pointer-events: none; /* ВАЖНО: чтобы клик проходил сквозь иконку */
+  pointer-events: none;
 }
 
 .card-image:hover .zoom-icon {
-  opacity: 1; /* Показываем при наведении */
+  opacity: 1;
 }
 
-/* --- КОНТЕНТ КАРТОЧКИ --- */
 .card-content {
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: space-between;
 }
 
 .card-title {
-  margin: 0 0 10px 0;
-  font-size: 1.35rem;
-  color: #222;
-  font-weight: 600;
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: var(--light-text);
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .card-desc {
   margin: 0 0 20px 0;
-  color: #666;
+  color: var(--dark-text);
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
-/* Нижняя панель с кнопкой */
 .card-bottom {
-    margin-top: auto; /* Прижимаем к низу */
-    display: flex;
-    justify-content: flex-end; /* Кнопка справа */
-    padding-top: 15px;
-    border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid var(--card-border);
+  margin-top: auto;
 }
 
-/* --- КНОПКА ПЛЮСИК --- */
 .toggle-btn {
-  background: #007bff; /* Синий цвет (поменяй на свой если надо) */
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
+  background: transparent;
+  color: var(--light-text);
+  border: 1px solid var(--dark-text);
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -117,86 +137,101 @@
 }
 
 .toggle-btn:hover {
-  background: #0056b3; /* Темнее при наведении */
+  background: var(--primary-red);
+  border-color: var(--primary-red);
   transform: scale(1.1);
 }
 
 .toggle-btn.active {
-  background: #dc3545; /* Красный, когда открыто */
-  transform: rotate(45deg); /* Превращаем плюс в крестик */
+  background: var(--primary-red);
+  border-color: var(--primary-red);
+  transform: rotate(45deg);
 }
 
-/* --- СКРЫТЫЙ БЛОК (АККОРДЕОН) --- */
 .more-info {
-  max-height: 0; /* Скрыто */
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out; /* Плавная анимация */
-  background-color: #f8f9fa;
+  transition: max-height 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0 0 16px 16px;
-  margin: 0 -20px -20px -20px; /* Растягиваем на всю ширину карточки */
+  margin: 0 -24px -24px -24px;
 }
 
 .more-info-inner {
-  padding: 20px;
+  padding: 20px 24px;
   font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #eee;
+  color: var(--light-text);
+  border-top: 1px solid var(--card-border);
   line-height: 1.6;
 }
 
-/* =========================================
-   --- ЛАЙТБОКС (ИСПРАВЛЕНО) ---
-========================================= */
 .lightbox {
-  display: none; /* Скрыт по умолчанию */
+  display: none;
   position: fixed;
-  /* ВАЖНО: Максимальный Z-index, чтобы быть поверх ВСЕГО */
-  z-index: 2147483647; 
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* Черный полупрозрачный фон */
+  background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Класс, который добавляет JS для показа */
 .lightbox.show {
   display: flex;
   opacity: 1;
 }
 
-/* Сама большая картинка */
 .lightbox img {
-  max-width: 90%;
+  max-width: 100%;
   max-height: 90vh;
   border-radius: 4px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.5);
-  transform: scale(0.95); /* Чуть уменьшена в начале */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
   transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
-/* Анимация увеличения картинки при открытии */
 .lightbox.show img {
   transform: scale(1);
 }
 
-/* Кнопка закрытия (крестик) */
 .close-lightbox {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #fff;
-  font-size: 50px;
+  top: 20px;
+  right: 30px;
+  color: var(--light-text);
+  font-size: 40px;
   cursor: pointer;
   line-height: 1;
   transition: color 0.2s;
-  z-index: 2147483648; /* Еще выше, чем фон */
+  z-index: 10000;
 }
 
 .close-lightbox:hover {
-  color: #dc3545;
+  color: var(--primary-red);
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 1.8rem;
+  }
+  
+  .cards-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .more-info {
+    margin: 0 -20px -20px -20px;
+  }
 }
