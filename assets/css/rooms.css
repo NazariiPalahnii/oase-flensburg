@@ -32,7 +32,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -41,7 +40,6 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  border-color: var(--primary-red);
 }
 
 .card-image {
@@ -115,7 +113,6 @@
   justify-content: flex-end;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-top: 1px solid var(--card-border);
   margin-top: auto;
 }
 
@@ -161,7 +158,6 @@
   padding: 20px 24px;
   font-size: 0.9rem;
   color: var(--light-text);
-  border-top: 1px solid var(--card-border);
   line-height: 1.6;
 }
 
