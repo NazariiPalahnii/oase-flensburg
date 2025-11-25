@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор Меню</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../../templates/css/header.css" />
+    <link rel="stylesheet" href="../../templates/css/footer.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="container">
+    
+      <div class="menu-section">
+          <header class="menu-header">
+              <h1>🍽️ Конструктор Банкета</h1>
+              <p>Выберите категорию, затем добавьте блюда в заказ</p>
+          </header>
+          
+          <div class="category-tabs" id="category-tabs">
+              </div>
+
+          <div class="menu-grid" id="menu-container">
+              </div>
+      </div>
+
+      <aside class="sidebar">
+          <div class="sticky-cart">
+              <div class="cart-header">
+                  <h2>📝 Ваш заказ</h2>
+              </div>
+              
+              <form id="orderForm" class="order-form">
+                  <div class="form-group">
+                      <label>Повод (праздник):</label>
+                      <select id="eventType">
+                          <option value="Свадьба">Свадьба</option>
+                          <option value="День рождения">День рождения</option>
+                          <option value="Корпоратив">Корпоратив</option>
+                          <option value="Другое">Другое</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Дата:</label>
+                      <input type="date" id="eventDate" required>
+                  </div>
+                  <div class="form-group">
+                      <label>Гостей:</label>
+                      <input type="number" id="guestCount" min="1" value="10" required>
+                  </div>
+                  <div class="form-group">
+                      <label>Ваш Email:</label>
+                      <input type="email" id="userEmail" placeholder="mail@example.com" required>
+                  </div>
+              </form>
+
+              <hr class="divider">
+
+              <h3>Выбрано блюд:</h3>
+              <div id="cart-items" class="cart-list">
+                  <div class="empty-cart">Корзина пуста</div>
+              </div>
+
+              <div class="cart-total">
+                  <div class="total-row">
+                      <span>Всего позиций:</span>
+                      <strong id="total-count">0</strong>
+                  </div>
+                  <div class="total-row main-total">
+                      <span>Итого:</span>
+                      <span><strong id="total-price">0</strong> ₽</span>
+                  </div>
+              </div>
+
+              <button onclick="sendOrder()" class="btn-submit">Отправить на согласование</button>
+          </div>
+      </aside>
+
+    </div
+  </main>
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/menu.js" defer></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

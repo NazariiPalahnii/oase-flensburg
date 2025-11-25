@@ -1,0 +1,282 @@
+// ================= ДАННЫЕ =================
+const menuDatabase = [
+    // --- Салаты (5 шт) ---
+    { 
+        id: 1, 
+        name: "Цезарь с курицей", 
+        category: "salads", 
+        price: 450, 
+        description: "Хрустящий айсберг, сочное филе, гренки и пармезан.", 
+        img: "https://placehold.co/300x200?text=Caesar" 
+    },
+    { 
+        id: 2, 
+        name: "Оливье с говядиной", 
+        category: "salads", 
+        price: 350, 
+        description: "Классический рецепт с отварной говядиной и горошком.", 
+        img: "https://placehold.co/300x200?text=Olivier" 
+    },
+    { 
+        id: 3, 
+        name: "Греческий", 
+        category: "salads", 
+        price: 400, 
+        description: "Свежие овощи, фета, орегано и оливковое масло.", 
+        img: "https://placehold.co/300x200?text=Greek" 
+    },
+    { 
+        id: 4, 
+        name: "Салат с креветками", 
+        category: "salads", 
+        price: 580, 
+        description: "Руккола, тигровые креветки, томаты черри и бальзамик.", 
+        img: "https://placehold.co/300x200?text=Shrimp" 
+    },
+    { 
+        id: 5, 
+        name: "Капрезе", 
+        category: "salads", 
+        price: 380, 
+        description: "Моцарелла, спелые томаты и свежий базилик.", 
+        img: "https://placehold.co/300x200?text=Caprese" 
+    },
+
+    // --- Горячее (5 шт) ---
+    { 
+        id: 6, 
+        name: "Стейк Рибай", 
+        category: "main", 
+        price: 1200, 
+        description: "Премиальная говядина зернового откорма на гриле.", 
+        img: "https://placehold.co/300x200?text=Ribeye" 
+    },
+    { 
+        id: 7, 
+        name: "Лосось гриль", 
+        category: "main", 
+        price: 950, 
+        description: "Стейк из лосося с лимоном и сливочным соусом.", 
+        img: "https://placehold.co/300x200?text=Salmon" 
+    },
+    { 
+        id: 8, 
+        name: "Утка с яблоками", 
+        category: "main", 
+        price: 850, 
+        description: "Запеченная утиная ножка с карамелизированным яблоком.", 
+        img: "https://placehold.co/300x200?text=Duck" 
+    },
+    { 
+        id: 9, 
+        name: "Свиной шашлык", 
+        category: "main", 
+        price: 600, 
+        description: "Сочная свиная шея в маринаде от шефа.", 
+        img: "https://placehold.co/300x200?text=Pork+BBQ" 
+    },
+    { 
+        id: 10, 
+        name: "Бефстроганов", 
+        category: "main", 
+        price: 700, 
+        description: "Кусочки говядины в сметанном соусе с грибами.", 
+        img: "https://placehold.co/300x200?text=Beef" 
+    },
+
+    // --- Гарниры ---
+    { 
+        id: 11, 
+        name: "Картофель фри", 
+        category: "sides", 
+        price: 200, 
+        description: "Золотистые ломтики с солью.", 
+        img: "https://placehold.co/300x200?text=Fries" 
+    },
+    { 
+        id: 12, 
+        name: "Овощи гриль", 
+        category: "sides", 
+        price: 300, 
+        description: "Перец, кабачок, баклажан и лук на огне.", 
+        img: "https://placehold.co/300x200?text=Veggies" 
+    },
+];
+
+// Состояние корзины
+let cart = {};
+let allDishElements = [];
+
+// ================= ФУНКЦИИ =================
+
+// 1. Создание кнопок категорий
+function renderCategoryTabs() {
+    const tabsContainer = document.getElementById('category-tabs');
+    const categories = [
+        { key: 'all', name: 'Все меню' },
+        { key: 'salads', name: '🥗 Салаты' },
+        { key: 'main', name: '🍖 Горячее' },
+        { key: 'sides', name: '🥔 Гарниры' }
+    ];
+
+    categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'category-btn';
+        btn.textContent = cat.name;
+        // Первая кнопка активна по умолчанию
+        if(cat.key === 'all') btn.classList.add('active');
+        
+        btn.onclick = (e) => filterMenu(cat.key, e.target);
+        tabsContainer.appendChild(btn);
+    });
+}
+
+// 2. Отрисовка блюд
+function renderMenu() {
+    const container = document.getElementById('menu-container');
+    container.innerHTML = ''; // Очистка
+    allDishElements = [];
+
+    menuDatabase.forEach(dish => {
+        const card = document.createElement('div');
+        card.className = 'dish-card';
+        card.setAttribute('data-category', dish.category);
+
+        card.innerHTML = `
+            <img src="${dish.img}" class="dish-img" alt="${dish.name}">
+            <div class="card-body">
+                <h3>${dish.name}</h3>
+                <p class="dish-desc">${dish.description}</p>
+                <div class="card-footer">
+                    <span class="price">${dish.price} ₽</span>
+                    <button class="btn-add" onclick="addToCart(${dish.id})">
+                        + В заказ
+                    </button>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(card);
+        allDishElements.push(card);
+    });
+}
+
+// 3. Фильтрация
+function filterMenu(category, btnElement) {
+    // Меняем стили кнопок
+    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    // Скрываем/показываем карточки
+    allDishElements.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex'; // Используем flex для сохранения верстки карточки
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// 4. Логика корзины
+function addToCart(id) {
+    if (!cart[id]) cart[id] = 0;
+    cart[id]++;
+    updateCartDisplay();
+}
+
+function removeFromCart(id) {
+    if (cart[id]) {
+        cart[id]--;
+        if (cart[id] === 0) delete cart[id];
+        updateCartDisplay();
+    }
+}
+
+function updateCartDisplay() {
+    const list = document.getElementById('cart-items');
+    list.innerHTML = '';
+    
+    let count = 0;
+    let price = 0;
+
+    if (Object.keys(cart).length === 0) {
+        list.innerHTML = '<div class="empty-cart">Корзина пуста</div>';
+    } else {
+        for (const [id, qty] of Object.entries(cart)) {
+            const dish = menuDatabase.find(d => d.id == id);
+            if (dish) {
+                count += qty;
+                price += qty * dish.price;
+
+                const item = document.createElement('div');
+                item.className = 'cart-item';
+                item.innerHTML = `
+                    <div class="item-info">
+                        <span class="item-name">${dish.name}</span>
+                        <span class="item-calc">${qty} шт. x ${dish.price} ₽</span>
+                    </div>
+                    <button class="btn-remove" onclick="removeFromCart(${id})">×</button>
+                `;
+                list.appendChild(item);
+            }
+        }
+    }
+
+    // Анимация обновления цены
+    animateValue('total-count', count);
+    animateValue('total-price', price);
+}
+
+// Вспомогательная функция для красивой смены цифр
+function animateValue(id, value) {
+    document.getElementById(id).innerText = value;
+}
+
+// 5. Отправка заказа
+function sendOrder() {
+    const eventType = document.getElementById('eventType').value;
+    const eventDate = document.getElementById('eventDate').value;
+    const guestCount = document.getElementById('guestCount').value;
+    const userEmail = document.getElementById('userEmail').value;
+
+    // Простая валидация
+    if (!eventDate || !userEmail) {
+        alert("❗ Пожалуйста, укажите дату мероприятия и Email.");
+        return;
+    }
+    if (Object.keys(cart).length === 0) {
+        alert("❗ Ваша корзина пуста. Выберите блюда.");
+        return;
+    }
+
+    // Сборка списка
+    let menuList = "";
+    let total = 0;
+
+    for (const [id, qty] of Object.entries(cart)) {
+        const dish = menuDatabase.find(d => d.id == id);
+        const sum = dish.price * qty;
+        total += sum;
+        menuList += `- ${dish.name}: ${qty} шт. (${sum} руб.)%0D%0A`;
+    }
+
+    const companyEmail = "info@banket-service.ru"; // ВАША ПОЧТА
+    const subject = `Заказ на ${eventDate} (${eventType})`;
+    const body = `Здравствуйте!%0D%0A%0D%0A` +
+                 `📝 ИНФОРМАЦИЯ О ЗАКАЗЕ:%0D%0A` +
+                 `Повод: ${eventType}%0D%0A` +
+                 `Дата: ${eventDate}%0D%0A` +
+                 `Гостей: ${guestCount}%0D%0A` +
+                 `Email: ${userEmail}%0D%0A%0D%0A` +
+                 `🥗 МЕНЮ:%0D%0A${menuList}%0D%0A` +
+                 `💰 ИТОГО: ${total} руб.`;
+
+    window.location.href = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
+}
+
+// ЗАПУСК
+window.onload = () => {
+    renderCategoryTabs();
+    renderMenu();
+    updateCartDisplay();
+};
