@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -8,22 +8,65 @@
     <link rel="stylesheet" href="../css/rooms.css" />
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
-    <script src="https://kit.fontawesome.com/5bb575665e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5bb575665e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div id="header-placeholder"></div>
+    <header>
+      <div class="container header__container">
+        <div class="logo">
+          <a href="../../index.html">
+            <img
+              src="../img/Oase-Flensburg-Logo-1024.png"
+              alt="logo"
+              class="logo__img"
+            />
+          </a>
+          <div class="logo__contact">
+            <i class="fa-solid fa-phone"></i>
+            <p>+49 0461 13199</p>
+          </div>
+          <div class="logo__contact">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Kielseng 30, 24937 Flensburg</p>
+          </div>
+        </div>
+
+        <nav id="main-nav">
+          <ul>
+            <li><a href="#resturant">Restaurant</a></li>
+            <li><a href="#gallery">Gallerie</a></li>
+            <li><a href="#events">Veranstaltungen</a></li>
+            <li><a href="#news1">Betreuung</a></li>
+          </ul>
+
+          <button class="header-cta-btn">
+            <a href="#">Buchungsanfrage</a>
+          </button>
+        </nav>
+
+        <button class="burger-menu" aria-label="Menü umschalten">
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+        </button>
+      </div>
+    </header>
 
     <main class="main">
       <h1>Räumlichkeiten</h1>
       <div class="cards-container container">
-        
         <div class="card">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 1" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Festsaal der Oase Flensburg für mehr als 450 Personen</h3>
+            <h3 class="card-title">
+              Festsaal der Oase Flensburg für mehr als 450 Personen
+            </h3>
             <p class="card-desc">
               Unser Festsaal bietet Platz für mehr als Personen und ist ideal
               für Feierlichkeiten, Tagungen oder besondere Anlässe. Ausgestattet
@@ -50,11 +93,13 @@
             <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 2" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Die Bar der Oase Flensburg für bis zu 60 Personen</h3>
+            <h3 class="card-title">
+              Die Bar der Oase Flensburg für bis zu 60 Personen
+            </h3>
             <p class="card-desc">
               Unsere stilvolle Bar bietet Platz für bis zu 60 Personen und lädt
-              in gemütlicher Atmosphäre zum Verweilen ein. Genießen
-              Sie von diesem Raum aus einen Blick auf die Flensburger Förde.
+              in gemütlicher Atmosphäre zum Verweilen ein. Genießen Sie von
+              diesem Raum aus einen Blick auf die Flensburger Förde.
             </p>
             <div class="card-bottom">
               <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
@@ -74,11 +119,14 @@
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 3" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Restaurant der Oase Flensburg für bis zu 60 Personen</h3>
+            <h3 class="card-title">
+              Restaurant der Oase Flensburg für bis zu 60 Personen
+            </h3>
             <p class="card-desc">
               Unser Restaurant bietet Platz für Genuss und Geselligkeit in
               stilvollem Ambiente. Ob gemütliches Dinner oder festliches Essen.
-              Genießen Sie von diesem Raum aus einen Blick auf die Flensburger Förde.
+              Genießen Sie von diesem Raum aus einen Blick auf die Flensburger
+              Förde.
             </p>
             <div class="card-bottom">
               <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
@@ -101,8 +149,8 @@
             <h3 class="card-title">Raum 31/32 – der „kleine Saal“</h3>
             <p class="card-desc">
               Der Raum 31/32 besteht aus zwei Raumhälften, die sich über eine
-              Faltwand verbinden lassen. So entsteht ein kleiner
-              Saal, der bis zu 70 Personen fassen kann.
+              Faltwand verbinden lassen. So entsteht ein kleiner Saal, der bis
+              zu 70 Personen fassen kann.
             </p>
             <div class="card-bottom">
               <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
@@ -179,8 +227,8 @@
           <div class="card-content">
             <h3 class="card-title">Raum 35 – klein mit Blick auf die Förde</h3>
             <p class="card-desc">
-              Der kleine Raum 35 mit schallisolierendem Textilfaser-Boden
-              eignet sich hervorragend für kleine Tagungen, Seminare und
+              Der kleine Raum 35 mit schallisolierendem Textilfaser-Boden eignet
+              sich hervorragend für kleine Tagungen, Seminare und
               Veranstaltungen bis zu 18 Personen.
             </p>
             <div class="card-bottom">
@@ -206,7 +254,8 @@
             <h3 class="card-title">Raum 36 – in ruhiger Lage mit Waldblick</h3>
             <p class="card-desc">
               Der Raum mit der Nummer 36 bietet eine ruhige Lage mit Blick in
-              den direkt angrenzenden Wald. Ideal für Seminare bis zu 34 Personen.
+              den direkt angrenzenden Wald. Ideal für Seminare bis zu 34
+              Personen.
             </p>
             <div class="card-bottom">
               <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
@@ -232,8 +281,8 @@
             <h3 class="card-title">Bowlingbahn</h3>
             <p class="card-desc">
               Unsere moderne Bowlingbahn bietet Spaß und Action für alle
-              Altersgruppen. Auf unseren Bahnen könnt ihr in geselliger Runde
-              um die höchste Punktzahl spielen.
+              Altersgruppen. Auf unseren Bahnen könnt ihr in geselliger Runde um
+              die höchste Punktzahl spielen.
             </p>
             <div class="card-bottom">
               <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
@@ -246,7 +295,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -255,13 +303,67 @@
       </div>
     </main>
 
-    <div id="footer-placeholder"></div>
-    <script src="../js/main.js"></script>
+    <footer class="site-footer">
+      <div class="container footer-content-wrapper">
+        <div class="footer-section footer-links">
+          <h3>Die EAS</h3>
+          <p>
+            Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
+            OASE – Betreuungseinrichtung.
+          </p>
+          <br />
+          <p>
+            Zur Übersicht der OASE-Standorte in Deutschland gelangen Sie hier:
+          </p>
+          <button class="btn-primary">
+            <a href="#">ZU DEN OASE-STANDORTE</a>
+          </button>
+        </div>
+
+        <div class="footer-section footer-contact">
+          <h3>Kontakt</h3>
+          <a href="#">Krimi-Dinner Testament à la carte</a>
+          <p>9 Sep. um 10:10 Uhr</p>
+        </div>
+
+        <div class="footer-section footer-social">
+          <h3>Aktuelles</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i>:
+            <a href="oase.flensburg@gmail.com">info@example.com</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>: <a href="#">+1 234 567 890</a>
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-logo">
+            <a href="../../index.html">
+              <img
+                src="../img/Oase-Flensburg-Logo-1024.png"
+                alt="logo"
+                class="logo__img"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2016-2025 Oase Flensburg</p>
+      </div>
+    </footer>
+    <!-- <script src="../js/main.js"></script> -->
     <script src="../js/rooms.js"></script>
-  <script
-    src="https://kit.fontawesome.com/5bb575665e.js"
-    crossorigin="anonymous"
-  ></script>
+    <script
+      src="https://kit.fontawesome.com/5bb575665e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
-

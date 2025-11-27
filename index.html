@@ -1,397 +1,520 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hauptseite - Oase Flensburg</title>
-  <link rel="stylesheet" href="assets/css/normalize.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="templates/css/header.css" />
-  <link rel="stylesheet" href="templates/css/footer.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hauptseite - Oase Flensburg</title>
+
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="templates/css/header.css" />
+    <link rel="stylesheet" href="templates/css/footer.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/animation.css" />
   </head>
-<body>
-  <div id="header-placeholder"></div>
-
-  <main class="main">
-    <section class="main_block">
-      <div class="container">
-        <div class="hero">
-          <div class="hero-left">
-            <h1 class="main_h1">Oase Flensburg</h1>
-            <h3 class="main_h3">
-              Kulinarische Begegnungen an der Flensburger Förde
-            </h3>
-            <p class="main_p">
-              Entdecken Sie nicht nur hochklassigen Genuss, sondern auch die
-              perfekte Location für besondere Anlässe. Ob Geburtstage,
-              Hochzeiten, Taufen oder geschäftliche Tagungen – wir bieten
-              eine unvergleichliche Atmosphäre für jede Feier und
-              Veranstaltung.
-            </p>
-           
-            <button class="btn-primary">
-                <a href="#" class="hero-btn-wrapper">Mehr erfahren</a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about_us" id="resturant">
-      <div class="container">
-        <div class="about_us-flex">
-          <div class="about_us_pictures_wrapper">
+  <body>
+    <header data-aos="fade-down" data-aos-once="true" data-aos-duration="1000">
+      <div class="container header__container">
+        <div class="logo">
+          <a href="../index.html">
             <img
-              class="about_us_pictures_main about_us_img"
-              src="./assets/img/Oase-Flensburg-Eingangsbereich.jpg"
-              alt="Eingangsbereich Oase Flensburg"
+              src="../assets/img/Oase-Flensburg-Logo-1024.png"
+              alt="logo"
+              class="logo__img"
             />
-            <img
-              class="about_us_pictures_second about_us_img"
-              src="assets/img/Oase-Flensburg-Blick-auf-die-Foerde.jpg"
-              alt="Blick auf die Förde"
-            />
+          </a>
+          <div class="logo__contact">
+            <i class="fa-solid fa-phone"></i>
+            <p>+49 0461 13199</p>
           </div>
-          <div class="about_us_text">
-            <h2 class="about_us_h2">Unser Restaurant</h2>
-            <p class="about_us_p">
-              In unserem Restaurant vereinen sich genussvolle Gaumenfreuden
-              mit einer entspannten Atmosphäre, die dazu einlädt, die Zeit zu
-              vergessen. Es erwartet Sie eine reichhaltige Auswahl
-              verschiedener nationaler und internationaler Gerichte. Die
-              lebendige Mischung aus kulinarischer Raffinesse und herzlicher
-              Gastfreundschaft schafft einen Ort, an dem man sich gerne
-              niederlässt und den Moment genießt. Ein harmonisches
-              Zusammenspiel von Aromen und Gemütlichkeit, das Ihren Besuch zu
-              einem schmackhaften und zugleich erholsamen Erlebnis macht.
-            </p>
-            <div class="about_us_block">
-              <a href="#" class="about_us_block-title">
-                <img
-                  class="block_img"
-                  src="assets/img/Adobe_Acrobat_Reader_icon_2020.svg.png"
-                  alt="PDF Icon"
-                />
-                <p class="about_us_h3">Speisekarte</p>
-              </a>
-              <a href="#" class="about_us_block-title">
-                <img
-                  class="block_img"
-                  src="assets/img/Adobe_Acrobat_Reader_icon_2020.svg.png"
-                  alt="PDF Icon"
-                />
-                <p class="about_us_h3">Weinkarte</p>
-              </a>
-            </div>
-            <div class="about_us_block_food">
-              <div class="about_us_block_food-1">
-                <h3>Lecker essen.</h3>
-                <p>Lernen Sie unser Restaurant kennen.</p>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="about_us_block_food-1">
-                <h3>Feste feiern.</h3>
-                <p>
-                  Feiern Sie bei uns alles, was es bei Ihnen zu feiern gibt.
-                </p>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="about_us_block_food-1">
-                <h3>Auszeit.</h3>
-                <p>Entdecken Sie unser Freizeitangebot.</p>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="about_us_block_food-1">
-                <h3>Betreuung.</h3>
-                <p>Erkunden Sie das Betreuungsangebot der EAS.</p>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-            </div>
+          <div class="logo__contact">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Kielseng 30, 24937 Flensburg</p>
           </div>
         </div>
+
+        <nav id="main-nav">
+          <ul>
+            <li><a href="#resturant">Restaurant</a></li>
+            <li><a href="#gallery">Gallerie</a></li>
+            <li><a href="#events">Veranstaltungen</a></li>
+            <li><a href="#news1">Betreuung</a></li>
+          </ul>
+
+          <button class="header-cta-btn">
+            <a href="#">Buchungsanfrage</a>
+          </button>
+        </nav>
+
+        <button class="burger-menu" aria-label="Menü umschalten">
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <section class="gallery bg-dark" id="gallery">
-      <h2 class="gallery_title">Galerie</h2>
-      <div class="container">
-        <div class="grid-wrapper">
-          <div class="image tall">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 1" />
-          </div>
-          <div class="image">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 2" />
-          </div>
-          <div class="image">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 3" />
-          </div>
-          <div class="image wide">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 4" />
-          </div>
-          <div class="image">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 5" />
-          </div>
-          <div class="image wide">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 6" />
-          </div>
-          <div class="image">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 7" />
-          </div>
-          <div class="image wide">
-            <img src="./assets/img/5D4_5737-scaled.jpg" alt="Galerie Bild 8" />
-          </div>
-        </div>
-        <button class="btn-primary">
-           <a href="#" class="gallery_button">Mehr Bilder in instagram</a>
-        </button>       
-      </div>
-    </section>
-
-    <section class="events" id="events">
-      <div class="container events_flex">
-        <div class="events_content">
-          <h2>Ihre Veranstaltungen in der OASE</h2>
-          <div class="events_block">
-            <button data-filter="events_data" class="text_events active">
-              Veranstaltungen
-            </button>
-            <button data-filter="party_data" class="text_events">
-              Partys & Feiern
-            </button>
-            <button data-filter="rooms_data" class="text_events">
-              Räume & Tagungen
-            </button>
-          </div>
-
-          <div class="events_elements">
-            <div class="events_box events_data events_style">
-              <a href="#"
-                ><img
-                  src="./assets/img/2025_12_31_FLE_Silvesterparty_A3_LQ_page-0001.jpg"
-                  alt="Silvesterparty"
-              /></a>
-              <a href="#"
-                ><img
-                  src="./assets/img/2025_11_07_FLE_Kriminal-Dinner_A3_LQ_page-0001.jpg"
-                  alt="Kriminal-Dinner"
-              /></a>
-            </div>
-            <div class="events_box party_data party_style hide">
-              <p>
-                Richten Sie Ihre Familienfeiern wie Jubiläen, Hochzeiten,
-                Geburtstage und Taufen in unseren Räumlichkeiten aus. Gerne
-                unterstützen wir Sie bei der gemeinsamen Planung und
-                Umsetzung Ihrer Festlichkeiten...
+    <main class="main">
+      <section class="main_block">
+        <div class="container">
+          <div class="hero">
+            <div class="hero-left" data-aos="fade-right" data-aos-delay="200">
+              <h1 class="main_h1">Oase Flensburg</h1>
+              <h3 class="main_h3">
+                Kulinarische Begegnungen an der Flensburger Förde
+              </h3>
+              <p class="main_p">
+                Entdecken Sie nicht nur hochklassigen Genuss, sondern auch die
+                perfekte Location für besondere Anlässe. Ob Geburtstage,
+                Hochzeiten, Taufen oder geschäftliche Tagungen – wir bieten eine
+                unvergleichliche Atmosphäre für jede Feier und Veranstaltung.
               </p>
-              <button class="btn-primary">
-                <a href="#" class="btn-link">RAUMÜBERSICHT</a>
+
+              <button
+                class="btn-primary"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              >
+                <a href="#" class="hero-btn-wrapper">Mehr erfahren</a>
               </button>
-             <button class="btn-primary">
-                <a href="#" class="btn-link">BUCHUNGSANFRAGE</a>
-              </button>
-            </div>
-            <div class="events_box rooms_data rooms_style hide">
-              <p>Nutzen Sie unser vielseitiges Raumangebot für Ihre:</p>
-              <ul>
-                <li>Tagungen</li>
-                <li>Seminare</li>
-                <li>Workshops</li>
-                <li>Mini-Kongresse</li>
-              </ul>
-              <button class="btn-primary">
-                <a href="#" class="btn-link">RAUMÜBERSICHT</a>
-              </button>
-             <button class="btn-primary">
-                <a href="#" class="btn-link">BUCHUNGSANFRAGE</a>
-              </button>
-              
             </div>
           </div>
         </div>
-        <div class="events_image_wrapper">
-          <img src="./assets/img/MKII5919-scaled.jpg" alt="Veranstaltungsraum" />
+      </section>
+
+      <section class="about_us" id="resturant">
+        <div class="container">
+          <div class="about_us-flex">
+            <div class="about_us_pictures_wrapper" data-aos="fade-right">
+              <img
+                class="about_us_pictures_main about_us_img"
+                src="./assets/img/Oase-Flensburg-Eingangsbereich.jpg"
+                alt="Eingangsbereich Oase Flensburg"
+              />
+              <img
+                class="about_us_pictures_second about_us_img"
+                src="assets/img/Oase-Flensburg-Blick-auf-die-Foerde.jpg"
+                alt="Blick auf die Förde"
+              />
+            </div>
+
+            <div class="about_us_text" data-aos="fade-left">
+              <h2 class="about_us_h2">Unser Restaurant</h2>
+              <p class="about_us_p">
+                In unserem Restaurant vereinen sich genussvolle Gaumenfreuden
+                mit einer entspannten Atmosphäre, die dazu einlädt, die Zeit zu
+                vergessen. Es erwartet Sie eine reichhaltige Auswahl
+                verschiedener nationaler und internationaler Gerichte. Die
+                lebendige Mischung aus kulinarischer Raffinesse und herzlicher
+                Gastfreundschaft schafft einen Ort, an dem man sich gerne
+                niederlässt und den Moment genießt. Ein harmonisches
+                Zusammenspiel von Aromen und Gemütlichkeit, das Ihren Besuch zu
+                einem schmackhaften und zugleich erholsamen Erlebnis macht.
+              </p>
+
+              <div
+                class="about_us_block"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <a href="#" class="about_us_block-title">
+                  <img
+                    class="block_img"
+                    src="assets/img/Adobe_Acrobat_Reader_icon_2020.svg.png"
+                    alt="PDF Icon"
+                  />
+                  <p class="about_us_h3">Speisekarte</p>
+                </a>
+                <a href="#" class="about_us_block-title">
+                  <img
+                    class="block_img"
+                    src="assets/img/Adobe_Acrobat_Reader_icon_2020.svg.png"
+                    alt="PDF Icon"
+                  />
+                  <p class="about_us_h3">Weinkarte</p>
+                </a>
+              </div>
+
+              <div class="about_us_block_food">
+                <div
+                  class="about_us_block_food-1"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <h3>Lecker essen.</h3>
+                  <p>Lernen Sie unser Restaurant kennen.</p>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div
+                  class="about_us_block_food-1"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <h3>Feste feiern.</h3>
+                  <p>
+                    Feiern Sie bei uns alles, was es bei Ihnen zu feiern gibt.
+                  </p>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div
+                  class="about_us_block_food-1"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <h3>Auszeit.</h3>
+                  <p>Entdecken Sie unser Freizeitangebot.</p>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div
+                  class="about_us_block_food-1"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <h3>Betreuung.</h3>
+                  <p>Erkunden Sie das Betreuungsangebot der EAS.</p>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery bg-dark" id="gallery">
+        <h2 class="gallery_title" data-aos="fade-down">Galerie</h2>
+        <div class="container">
+          <div class="grid-wrapper">
+            <div class="image tall" data-aos="zoom-in" data-aos-delay="100">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 1"
+              />
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-delay="150">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 2"
+              />
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-delay="200">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 3"
+              />
+            </div>
+            <div class="image wide" data-aos="zoom-in" data-aos-delay="250">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 4"
+              />
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-delay="300">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 5"
+              />
+            </div>
+            <div class="image wide" data-aos="zoom-in" data-aos-delay="350">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 6"
+              />
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-delay="400">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 7"
+              />
+            </div>
+            <div class="image wide" data-aos="zoom-in" data-aos-delay="450">
+              <img
+                src="./assets/img/5D4_5737-scaled.jpg"
+                alt="Galerie Bild 8"
+              />
+            </div>
+          </div>
+          <button class="btn-primary" data-aos="fade-up">
+            <a href="#" class="gallery_button">Mehr Bilder in instagram</a>
+          </button>
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div class="container events_flex">
+          <div class="events_content" data-aos="fade-right">
+            <h2>Ihre Veranstaltungen in der OASE</h2>
+            <div class="events_block">
+              <button data-filter="events_data" class="text_events active">
+                Veranstaltungen
+              </button>
+              <button data-filter="party_data" class="text_events">
+                Partys & Feiern
+              </button>
+              <button data-filter="rooms_data" class="text_events">
+                Räume & Tagungen
+              </button>
+            </div>
+
+            <div class="events_elements">
+              <div
+                class="events_box events_data events_style"
+                data-aos="fade-in"
+              >
+                <a href="#"
+                  ><img
+                    src="./assets/img/2025_12_31_FLE_Silvesterparty_A3_LQ_page-0001.jpg"
+                    alt="Silvesterparty"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/img/2025_11_07_FLE_Kriminal-Dinner_A3_LQ_page-0001.jpg"
+                    alt="Kriminal-Dinner"
+                /></a>
+              </div>
+              <div class="events_box party_data party_style hide">
+                <p>
+                  Richten Sie Ihre Familienfeiern wie Jubiläen, Hochzeiten,
+                  Geburtstage und Taufen in unseren Räumlichkeiten aus...
+                </p>
+                <button class="btn-primary">
+                  <a href="#" class="btn-link">RAUMÜBERSICHT</a>
+                </button>
+                <button class="btn-primary">
+                  <a href="#" class="btn-link">BUCHUNGSANFRAGE</a>
+                </button>
+              </div>
+              <div class="events_box rooms_data rooms_style hide">
+                <p>Nutzen Sie unser vielseitiges Raumangebot für Ihre:</p>
+                <ul>
+                  <li>Tagungen</li>
+                  <li>Seminare</li>
+                  <li>Workshops</li>
+                  <li>Mini-Kongresse</li>
+                </ul>
+                <button class="btn-primary">
+                  <a href="#" class="btn-link">RAUMÜBERSICHT</a>
+                </button>
+                <button class="btn-primary">
+                  <a href="#" class="btn-link">BUCHUNGSANFRAGE</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="events_image_wrapper" data-aos="fade-left">
+            <img
+              src="./assets/img/MKII5919-scaled.jpg"
+              alt="Veranstaltungsraum"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="news" id="news1">
+        <div class="container">
+          <h2 class="news_title" data-aos="fade-up">
+            Das Betreuungs- und Service-Angebot der OASE Flensburg
+          </h2>
+          <div class="news_flex">
+            <div class="news_block">
+              <div data-aos="fade-up" data-aos-delay="100">
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">Unsere Kegelbahn</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>
+                      Entdecken Sie den Spaß am Kegeln in unserer Kegelbahn!
+                      Genießen Sie gesellige Stunden mit Familie und Freunden...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">Übernachten in der OASE</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>
+                      Ihnen stehen im Rahmen Ihrer Feierlichkeiten in unserem
+                      Hause
+                    </p>
+                    <ul>
+                      <li>ein Doppelzimmer</li>
+                      <li>zwei Einzelzimmer</li>
+                    </ul>
+                    <p>zur Verfügung.</p>
+                  </div>
+                </div>
+
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">Unsere Partner</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>
+                      Marineschule Flensburg<br />
+                      Kelmstraße 14...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text"
+                      >Angebote für Angehörige der Bundeswhr</span
+                    >
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>
+                      Nachlass 10 Prozent Nachlass auf Speisen und Getränke...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">Die EAS</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>Geleitet von dem Gebot christlicher Nächstenliebe...</p>
+                  </div>
+                </div>
+
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">EAS-Veranstaltungskalender</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <p>Der Dienst in der Bundeswehr ist mit besonderen...</p>
+                    <button class="btn-primary">
+                      <a href="#" class="btn-link"
+                        >ZUM EAS-Veranstaltungskalender</a
+                      >
+                    </button>
+                  </div>
+                </div>
+
+                <div class="news_item">
+                  <div class="news_header">
+                    <span class="news_text">EAS-Ansprechpartner</span>
+                    <span class="toggle-icon">+</span>
+                  </div>
+                  <div class="news_content">
+                    <img src="" alt="Foto von Dieter Hollinde" />
+                    <p>
+                      Dieter Hollinde<br />
+                      Regionalreferent West...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="news_button" data-aos="zoom-in">
+              <button class="btn-primary">
+                <a href="#" class="btn-link">Aktuelles & Angebote</a>
+              </button>
+              <button class="btn-primary">
+                <a href="./assets/html/rooms.html" class="btn-link"
+                  >Räumlichketien</a
+                >
+              </button>
+              <button class="btn-primary">
+                <a href="./assets/html/menu.html" class="btn-link"
+                  >Buchungsanfrage</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content-wrapper">
+        <div
+          class="footer-section footer-links"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h3>Die EAS</h3>
+          <p>
+            Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
+            OASE – Betreuungseinrichtung.
+          </p>
+          <br />
+          <p>
+            Zur Übersicht der OASE-Standorte in Deutschland gelangen Sie hier:
+          </p>
+          <button class="btn-primary">
+            <a href="#">ZU DEN OASE-STANDORTE</a>
+          </button>
+        </div>
+
+        <div
+          class="footer-section footer-contact"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3>Kontakt</h3>
+          <a href="#">Krimi-Dinner Testament à la carte</a>
+          <p>9 Sep. um 10:10 Uhr</p>
+        </div>
+
+        <div
+          class="footer-section footer-social"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3>Aktuelles</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i>:
+            <a href="oase.flensburg@gmail.com">info@example.com</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>: <a href="#">+1 234 567 890</a>
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-logo">
+            <a href="../index.html">
+              <img
+                src="../assets/img/Oase-Flensburg-Logo-1024.png"
+                alt="logo"
+                class="logo__img"
+              />
+            </a>
+          </p>
         </div>
       </div>
-    </section>
 
-    <section class="news" id="news1">
-      <div class="container">
-        <h2 class="news_title">
-          Das Betreuungs- und Service-Angebot der OASE Flensburg
-        </h2>
-        <div class="news_flex">
-          <div class="news_block">
-            <div>
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">Unsere Kegelbahn</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Entdecken Sie den Spaß am Kegeln in unserer Kegelbahn!
-                    Genießen Sie gesellige Stunden mit Familie und Freunden,
-                    während Sie Ihre Kugeln werfen und um die Bestenliste
-                    kämpfen. Erleben Sie eine einzigartige Mischung aus Sport
-                    und Unterhaltung – Herzlich willkommen auf unserer
-                    Kegelbahn!
-                  </p>
-                </div>
-              </div>
-
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">Übernachten in der OASE</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Ihnen stehen im Rahmen Ihrer Feierlichkeiten in unserem
-                    Hause
-                  </p>
-                  <ul>
-                    <li>ein Doppelzimmer</li>
-                    <li>zwei Einzelzimmer</li>
-                  </ul>
-                  <p>zur Verfügung.</p>
-                </div>
-              </div>
-
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">Unsere Partner</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Marineschule Flensburg<br />
-                    Kelmstraße 14<br />
-                    24944 Flensburg<br />
-                    <br />
-                    Schule Strategische Aufklärung der Bundeswehr<br />
-                    Mürwiker Straße 203<br />
-                    24944 Flensburg<br />
-                    <br />
-                    Evangelisches Militärpfarramt Flensburg<br />
-                    Marineschule Mürwik<br />
-                    Kelmstraße 14<br />
-                    24944 Flensburg<br />
-                  </p>
-                </div>
-              </div>
-
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text"
-                    >Angebote für Angehörige der Bundeswhr</span
-                  >
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Nachlass 10 Prozent Nachlass auf Speisen und Getränke
-                    unserer Speisekarte für Bundeswehrangehörige (Vorlage des
-                    Truppen- bzw. Dienstausweises; Aktionsangebote
-                    ausgenommen) Kegelbahn Kostenlose Nutzung der Kegelbahn
-                    (nach Voranmeldung) Veranstaltungen Kostenlose Nutzung
-                    des Festsaals und der Tagungsräume für dienstliche
-                    Veranstaltungen (ggf. anfallende Reinigungsgebühr)
-                    Bewirtung bei dienstlichen Veranstaltungen und Tagungen
-                    zu besonderen Konditionen.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">Die EAS</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Geleitet von dem Gebot christlicher Nächstenliebe
-                    engagiert sich die Evangelische Arbeitsgemeinschaft für
-                    Soldatenbetreuung (EAS) seit 1957 als selbstständige und
-                    gemeinnützige Organisation in der Betreuung der
-                    Bundeswehrangehörigen und ihrer Familien. Als Teil der
-                    Evangelischen Seelsorge in der Bundeswehr bietet sie in
-                    der Tradition kirchlicher Diakonie bedarfsgerechte
-                    Betreuungsformate an, die allen Menschen, unabhängig von
-                    ihrem militärischen Rang, ihrer Herkunft, ihrer
-                    Religion, ihrem Geschlecht oder ihrer sexuellen
-                    Identität, offenstehen.
-                  </p>
-                </div>
-              </div>
-
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">EAS-Veranstaltungskalender</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <p>
-                    Der Dienst in der Bundeswehr ist mit besonderen
-                    Herausforderungen verbunden. Zur Entlastung der
-                    Bundeswehrangehörigen und deren Familien bietet die
-                    Evangelische Arbeitsgemeinschaft für Soldatenbetreuung
-                    (EAS) lokal und überregional vielfältige und
-                    bedarfsgerechte Betreuungsveranstaltungen an. Alle
-                    Veranstaltungstermine mit weiterführenden Informationen
-                    sind online auf der Website der EAS abgebildet und
-                    buchbar.
-                  </p>
-                  <button class="btn-primary">
-                     <a href="#" class="btn-link">ZUM EAS-Veranstaltungskalender</a>
-                  </button>
-                </div>
-              </div>
-
-              <div class="news_item">
-                <div class="news_header">
-                  <span class="news_text">EAS-Ansprechpartner</span>
-                  <span class="toggle-icon">+</span>
-                </div>
-                <div class="news_content">
-                  <img src="" alt="Foto von Dieter Hollinde" />
-                  <p>
-                    Dieter Hollinde<br />
-                    Regionalreferent West, Diplom-Politologe und
-                    Oberstleutnant d.R.<br />
-                    <br />
-                    E-Mail:<br />
-                    d.hollinde@eas-berlin.de<br />
-                    Telefon:<br />
-                    0160 475 91 18
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="news_button">
-            <button class="btn-primary">
-              <a href="#" class="btn-link">Aktuelles & Angebote</a>
-            </button>
-            <button class="btn-primary">
-              <a href="./assets/html/rooms.html" class="btn-link">Räumlichketien</a>
-            </button>
-            <button class="btn-primary">
-              <a href="./assets/html/menu.html" class="btn-link">Buchungsanfrage</a>
-            </button>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2016-2025 Oase Flensburg</p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <div id="footer-placeholder"></div>
+    <script src="assets/js/gallery.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5bb575665e.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="assets/js/main.js"></script>
-  <script
-    src="https://kit.fontawesome.com/5bb575665e.js"
-    crossorigin="anonymous"
-  ></script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/animation.js"></script>
+  </body>
 </html>

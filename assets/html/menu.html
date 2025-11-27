@@ -10,15 +10,54 @@
     <link rel="stylesheet" href="../../templates/css/footer.css" />
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
+  <header>
+    <div class="container header__container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img
+            src="../img/Oase-Flensburg-Logo-1024.png"
+            alt="logo"
+            class="logo__img"
+          />
+        </a>
+        <div class="logo__contact">
+          <i class="fa-solid fa-phone"></i>
+          <p>+49 0461 13199</p>
+        </div>
+        <div class="logo__contact">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Kielseng 30, 24937 Flensburg</p>
+        </div>
+      </div>
+  
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#resturant">Restaurant</a></li>
+          <li><a href="#gallery">Gallerie</a></li>
+          <li><a href="#events">Veranstaltungen</a></li>
+          <li><a href="#news1">Betreuung</a></li>
+        </ul>
+  
+        <button class="header-cta-btn">
+          <a href="#">Buchungsanfrage</a>
+        </button>
+      </nav>
+  
+      <button class="burger-menu" aria-label="Menü umschalten">
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+      </button>
+    </div>
+  </header>
+  
   <main>
     <div class="container">
     
       <div class="menu-section">
           <header class="menu-header">
-              <h1>🍽️ Конструктор Банкета</h1>
-              <p>Выберите категорию, затем добавьте блюда в заказ</p>
+              <h1>Buchungsanfrage</h1>
+              <p> Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer Bestellung hinzu.</p>
           </header>
           
           <div class="category-tabs" id="category-tabs">
@@ -31,56 +70,101 @@
       <aside class="sidebar">
           <div class="sticky-cart">
               <div class="cart-header">
-                  <h2>Ваш заказ</h2>
+                  <h2>Ihre Bestellung</h2>
               </div>
               
               <form id="orderForm" class="order-form">
                   <div class="form-group">
-                      <label>Повод (праздник):</label>
+                      <label>Anlass (Feiertag):</label>
                       <select id="eventType">
-                          <option value="Свадьба">Свадьба</option>
-                          <option value="День рождения">День рождения</option>
-                          <option value="Корпоратив">Корпоратив</option>
-                          <option value="Другое">Другое</option>
+                          <option value="Свадьба">Hochzeit</option>
+                          <option value="День рождения">Geburtstag</option>
+                          <option value="Корпоратив">Firmenveranstaltung</option>
+                          <option value="Другое">Andere</option>
                       </select>
                   </div>
                   <div class="form-group">
-                      <label>Дата:</label>
+                      <label>Date:</label>
                       <input type="date" id="eventDate" required>
                   </div>
                   <div class="form-group">
-                      <label>Гостей:</label>
+                      <label>Gäste:</label>
                       <input type="number" id="guestCount" min="1" value="10" required>
                   </div>
                   <div class="form-group">
-                      <label>Ваш Email:</label>
+                      <label>Ihre Email:</label>
                       <input type="email" id="userEmail" placeholder="mail@example.com" required>
                   </div>
               </form>
 
               <hr class="divider">
 
-              <h3>Выбрано блюд:</h3>
+              <h3>Ausgewähltes Gericht:</h3>
               <div id="cart-items" class="cart-list">
-                  <div class="empty-cart">Корзина пуста</div>
+                  <div class="empty-cart">Der Warenkorb ist leer</div>
               </div>
 
               <div class="cart-total">
                   <div class="total-row">
-                      <span>Всего позиций:</span>
+                      <span>Gesamtpositionen:</span>
                       <strong id="total-count">0</strong>
                   </div>
               </div>
 
-              <button onclick="sendOrder()" class="btn-submit">Отправить на согласование</button>
+              <button onclick="sendOrder()" class="btn-submit">Zur Genehmigung senden</button>
           </div>
       </aside>
 
     </div
   </main>
-  <div id="footer-placeholder"></div>
 
+  <footer class="site-footer">
+    <div class="container footer-content-wrapper">
+      <div class="footer-section footer-links">
+        <h3>Die EAS</h3>
+        <p>
+          Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
+          OASE – Betreuungseinrichtung.
+        </p>
+        <br />
+        <p>Zur Übersicht der OASE-Standorte in Deutschland gelangen Sie hier:</p>
+        <button class="btn-primary"><a href="#">ZU DEN OASE-STANDORTE</a></button>
+      </div>
+  
+      <div class="footer-section footer-contact">
+        <h3>Kontakt</h3>
+        <a href="#">Krimi-Dinner Testament à la carte</a>
+        <p>9 Sep. um 10:10 Uhr</p>
+      </div>
+  
+      <div class="footer-section footer-social">
+        <h3>Aktuelles</h3>
+        <p><i class="fa-solid fa-envelope"></i>: <a href="oase.flensburg@gmail.com">info@example.com</a></p>
+        <p><i class="fa-solid fa-phone"></i>: <a href="#">+1 234 567 890</a></p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p class="footer-logo">
+          <a href="../../index.html">
+            <img
+              src="../img/Oase-Flensburg-Logo-1024.png"
+              alt="logo"
+              class="logo__img"
+            />
+          </a>
+        </p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2016-2025 Oase Flensburg</p>
+    </div>
+  </footer>
   <script src="../js/menu.js" defer></script>
-  <script src="../js/main.js"></script>
+  <script
+      src="https://kit.fontawesome.com/5bb575665e.js"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
