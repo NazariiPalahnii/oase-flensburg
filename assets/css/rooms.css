@@ -1,3 +1,7 @@
+.main {
+  margin: 108px auto;
+}
+
 .main h1 {
   text-align: center;
   color: var(--light-text);
