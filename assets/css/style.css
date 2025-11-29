@@ -39,10 +39,11 @@
    ОСТАЛЬНЫЕ СТИЛИ
    ========================================= */
 
+
 .main_block {
   max-width: 1400px;
   height: 650px;
-  margin: 48px auto;
+  margin: 108px auto;
   padding: 0px 20px 0px 20px;
   border-radius: 24px;
   overflow: hidden;
@@ -180,24 +181,24 @@
   align-items: flex-start;
 }
 
-/* .about_us_pictures_wrapper { */
-/*   position: relative; */
-/*   width: 560px; */
-/*   flex-shrink: 0; */
-/* } */
-/* .about_us_pictures_main { */
-/*   width: 100%; */
-/*   border-radius: 14px; */
-/* } */
-/**/
-/* .about_us_pictures_second { */
-/*   position: absolute; */
-/*   top: 320px; */
-/*   left: 290px; */
-/*   width: 300px; */
-/*   border-radius: 14px; */
-/*   z-index: 2; */
-/* } */
+.about_us_pictures_wrapper {
+  position: relative;
+  width: 560px;
+  flex-shrink: 0;
+}
+.about_us_pictures_main {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.about_us_pictures_second {
+  position: absolute;
+  top: 320px;
+  left: 290px;
+  width: 300px;
+  border-radius: 14px;
+  z-index: 2;
+}
 
 .about_us_text {
   max-width: 600px;
