@@ -1,12 +1,10 @@
-.main {
-  margin: 108px auto;
-}
+
 
 .main h1 {
   text-align: center;
   color: var(--light-text);
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 108px auto;
   padding: 40px 20px 30px;
   position: relative;
 }
