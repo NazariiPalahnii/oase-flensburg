@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Räumlichkeiten - Oase Flensburg</title>
+
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/rooms.css" />
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="assets/css/animation.css" />
     <script
       src="https://kit.fontawesome.com/5bb575665e.js"
       crossorigin="anonymous"
@@ -58,7 +63,8 @@
     <main class="main">
       <h1>Räumlichkeiten</h1>
       <div class="cards-container container">
-        <div class="card">
+        
+        <div class="card" data-aos="fade-up" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 1" />
@@ -87,7 +93,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 2" />
@@ -113,7 +119,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 3" />
@@ -140,7 +146,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 4" />
@@ -166,7 +172,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 9" />
@@ -192,7 +198,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 5" />
@@ -219,7 +225,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-36.png" alt="Raum 6" />
@@ -245,7 +251,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-33.png" alt="Raum 7" />
@@ -272,7 +278,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
           <div class="card-image" onclick="openLightbox(this)">
             <span class="zoom-icon"><i class="fas fa-search"></i></span>
             <img src="../img/Oase-Flensburg-Raum-34.png" alt="Raum 8" />
@@ -305,7 +311,11 @@
 
     <footer class="site-footer">
       <div class="container footer-content-wrapper">
-        <div class="footer-section footer-links">
+        <div
+          class="footer-section footer-links"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <h3>Die EAS</h3>
           <p>
             Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
@@ -320,13 +330,21 @@
           </button>
         </div>
 
-        <div class="footer-section footer-contact">
+        <div
+          class="footer-section footer-contact"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h3>Kontakt</h3>
           <a href="#">Krimi-Dinner Testament à la carte</a>
           <p>9 Sep. um 10:10 Uhr</p>
         </div>
 
-        <div class="footer-section footer-social">
+        <div
+          class="footer-section footer-social"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <h3>Aktuelles</h3>
           <p>
             <i class="fa-solid fa-envelope"></i>:
@@ -344,9 +362,9 @@
             ></a>
           </div>
           <p class="footer-logo">
-            <a href="../../index.html">
+            <a href="../index.html">
               <img
-                src="../img/Oase-Flensburg-Logo-1024.png"
+                src="../assets/img/Oase-Flensburg-Logo-1024.png"
                 alt="logo"
                 class="logo__img"
               />
@@ -359,7 +377,11 @@
         <p>&copy; 2016-2025 Oase Flensburg</p>
       </div>
     </footer>
-    <!-- <script src="../js/main.js"></script> -->
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    
+    <script src="../js/animation.js"></script>
+    
     <script src="../js/rooms.js"></script>
     <script
       src="https://kit.fontawesome.com/5bb575665e.js"

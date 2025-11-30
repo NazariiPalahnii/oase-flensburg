@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конструктор Меню</title>
+
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/menu.css" />
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
+
+    <link rel="stylesheet" href="../css/animation.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 </head>
 <body>
-  <header>
+
+  <header data-aos="fade-down" data-aos-duration="1000">
     <div class="container header__container">
       <div class="logo">
         <a href="../../index.html">
@@ -55,19 +61,19 @@
     <div class="container">
     
       <div class="menu-section">
-          <header class="menu-header">
-              <h1>Buchungsanfrage</h1>
-              <p> Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer Bestellung hinzu.</p>
-          </header>
+          <div class="menu-header">
+              <h1 data-aos="fade-right" data-aos-duration="800">Buchungsanfrage</h1>
+              <p data-aos="fade-right" data-aos-delay="200" data-aos-duration="800"> Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer Bestellung hinzu.</p>
+          </div>
           
-          <div class="category-tabs" id="category-tabs">
-              </div>
+          <div class="category-tabs" id="category-tabs" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+          </div>
 
-          <div class="menu-grid" id="menu-container">
+          <div class="menu-grid" id="menu-container" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
               </div>
       </div>
 
-      <aside class="sidebar">
+      <aside class="sidebar" data-aos="fade-left" data-aos-duration="1000">
           <div class="sticky-cart">
               <div class="cart-header">
                   <h2>Ihre Bestellung</h2>
@@ -77,10 +83,10 @@
                   <div class="form-group">
                       <label>Anlass (Feiertag):</label>
                       <select id="eventType">
-                          <option value="Свадьба">Hochzeit</option>
-                          <option value="День рождения">Geburtstag</option>
-                          <option value="Корпоратив">Firmenveranstaltung</option>
-                          <option value="Другое">Andere</option>
+                          <option value="Hochzeit">Hochzeit</option>
+                          <option value="Geburtstag">Geburtstag</option>
+                          <option value="Firmenveranstaltung">Firmenveranstaltung</option>
+                          <option value="Andere">Andere</option>
                       </select>
                   </div>
                   <div class="form-group">
@@ -111,57 +117,86 @@
                   </div>
               </div>
 
-              <button onclick="sendOrder()" class="btn-submit">Zur Genehmigung senden</button>
+              <button type="button" onclick="sendOrder()" class="btn-submit">Zur Genehmigung senden</button>
           </div>
       </aside>
 
-    </div
+    </div> 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content-wrapper">
-      <div class="footer-section footer-links">
-        <h3>Die EAS</h3>
-        <p>
-          Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
-          OASE – Betreuungseinrichtung.
-        </p>
-        <br />
-        <p>Zur Übersicht der OASE-Standorte in Deutschland gelangen Sie hier:</p>
-        <button class="btn-primary"><a href="#">ZU DEN OASE-STANDORTE</a></button>
-      </div>
-  
-      <div class="footer-section footer-contact">
-        <h3>Kontakt</h3>
-        <a href="#">Krimi-Dinner Testament à la carte</a>
-        <p>9 Sep. um 10:10 Uhr</p>
-      </div>
-  
-      <div class="footer-section footer-social">
-        <h3>Aktuelles</h3>
-        <p><i class="fa-solid fa-envelope"></i>: <a href="oase.flensburg@gmail.com">info@example.com</a></p>
-        <p><i class="fa-solid fa-phone"></i>: <a href="#">+1 234 567 890</a></p>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <footer class="site-footer">
+      <div class="container footer-content-wrapper">
+        <div
+          class="footer-section footer-links"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h3>Die EAS</h3>
+          <p>
+            Die EAS An insgesamt zehn Bundeswehrstandorten betreibt die EAS eine
+            OASE – Betreuungseinrichtung.
+          </p>
+          <br />
+          <p>
+            Zur Übersicht der OASE-Standorte in Deutschland gelangen Sie hier:
+          </p>
+          <button class="btn-primary">
+            <a href="#">ZU DEN OASE-STANDORTE</a>
+          </button>
         </div>
-        <p class="footer-logo">
-          <a href="../../index.html">
-            <img
-              src="../img/Oase-Flensburg-Logo-1024.png"
-              alt="logo"
-              class="logo__img"
-            />
-          </a>
-        </p>
+
+        <div
+          class="footer-section footer-contact"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3>Kontakt</h3>
+          <a href="#">Krimi-Dinner Testament à la carte</a>
+          <p>9 Sep. um 10:10 Uhr</p>
+        </div>
+
+        <div
+          class="footer-section footer-social"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3>Aktuelles</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i>:
+            <a href="oase.flensburg@gmail.com">info@example.com</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>: <a href="#">+1 234 567 890</a>
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-logo">
+            <a href="../index.html">
+              <img
+                src="../assets/img/Oase-Flensburg-Logo-1024.png"
+                alt="logo"
+                class="logo__img"
+              />
+            </a>
+          </p>
+        </div>
       </div>
-    </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2016-2025 Oase Flensburg</p>
+      </div>
+    </footer>
   
-    <div class="footer-bottom">
-      <p>&copy; 2016-2025 Oase Flensburg</p>
-    </div>
-  </footer>
   <script src="../js/menu.js" defer></script>
+  <script src="../js/animation.js"></script> 
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
   <script
       src="https://kit.fontawesome.com/5bb575665e.js"
       crossorigin="anonymous"

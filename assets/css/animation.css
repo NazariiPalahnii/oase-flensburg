@@ -9,12 +9,12 @@ a, button, .btn-primary, img {
 }
 
 /* 2. Эффекты для кнопок (подпрыгивание и тень) */
-.btn-primary:hover, .header-cta-btn:hover {
+.button:hover, .header-cta-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.btn-primary:active {
+.button:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }

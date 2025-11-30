@@ -3,6 +3,10 @@ body {
   background: var(--background-dark);
 }
 
+main {
+  margin: 108px auto 0px ;
+}
+
 .container {
   display: flex;
   gap: 30px;
