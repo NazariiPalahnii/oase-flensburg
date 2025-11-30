@@ -1,0 +1,14 @@
+main {
+  margin-top: 140px;
+
+}
+
+img {
+  width: 550px;
+  border-radius: 15px;
+}
+
+.events-flex {
+  display: flex;
+  justify-content: space-between;
+}

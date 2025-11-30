@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Конструктор Меню</title>
-
     <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/events.css" />
+    <link rel="stylesheet" href="../css/animation.css">
+
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
-
-    <link rel="stylesheet" href="../css/animation.css" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Aktuelles & ANgebote</title>
   </head>
   <body>
     <header data-aos="fade-down" data-aos-duration="1000">
@@ -37,14 +34,14 @@
 
         <nav id="main-nav">
           <ul>
-            <li><a href="#resturant">Restaurant</a></li>
-            <li><a href="#gallery">Gallerie</a></li>
-            <li><a href="#events">Veranstaltungen</a></li>
-            <li><a href="#news1">Betreuung</a></li>
+            <li><a href="../../index.html#restaurant">Restaurant</a></li>
+            <li><a href="../../index.html#gallery">Gallerie</a></li>
+            <li><a href="../../index.html#events">Veranstaltungen</a></li>
+            <li><a href="../../index.html#news1">Betreuung</a></li>
           </ul>
 
           <button class="header-cta-btn">
-            <a href="#">Buchungsanfrage</a>
+            <a href="menu.html">Buchungsanfrage</a>
           </button>
         </nav>
 
@@ -57,101 +54,22 @@
     </header>
 
     <main>
-      <div class="container">
-        <div class="menu-section">
-          <div class="menu-header">
-            <h1 data-aos="fade-right" data-aos-duration="800">
-              Buchungsanfrage
-            </h1>
-            <p
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="800"
-            >
-              Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer
-              Bestellung hinzu.
-            </p>
-          </div>
-
-          <div
-            class="category-tabs"
-            id="category-tabs"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="800"
-          ></div>
-
-          <div
-            class="menu-grid"
-            id="menu-container"
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-duration="800"
-          ></div>
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
+        <h1>Aktuelles & Angebote</h1>
+        <div class="events-flex">
+          <a href="#">
+            <img
+              src="../img/2025_11_07_FLE_Kriminal-Dinner_A3_LQ_page-0001.jpg"
+              alt=""
+            />
+          </a>
+          <a href="#">
+            <img
+              src="../img/2025_12_31_FLE_Silvesterparty_A3_LQ_page-0001.jpg"
+              alt=""
+            />
+          </a>
         </div>
-
-        <aside class="sidebar" data-aos="fade-left" data-aos-duration="1000">
-          <div class="sticky-cart">
-            <div class="cart-header">
-              <h2>Ihre Bestellung</h2>
-            </div>
-
-            <form id="orderForm" class="order-form">
-              <div class="form-group">
-                <label>Anlass (Feiertag):</label>
-                <select id="eventType">
-                  <option value="Hochzeit">Hochzeit</option>
-                  <option value="Geburtstag">Geburtstag</option>
-                  <option value="Firmenveranstaltung">
-                    Firmenveranstaltung
-                  </option>
-                  <option value="Andere">Andere</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Date:</label>
-                <input type="date" id="eventDate" required />
-              </div>
-              <div class="form-group">
-                <label>Gäste:</label>
-                <input
-                  type="number"
-                  id="guestCount"
-                  min="1"
-                  value="10"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Ihre Email:</label>
-                <input
-                  type="email"
-                  id="userEmail"
-                  placeholder="mail@example.com"
-                  required
-                />
-              </div>
-            </form>
-
-            <hr class="divider" />
-
-            <h3>Ausgewähltes Gericht:</h3>
-            <div id="cart-items" class="cart-list">
-              <div class="empty-cart">Der Warenkorb ist leer</div>
-            </div>
-
-            <div class="cart-total">
-              <div class="total-row">
-                <span>Gesamtpositionen:</span>
-                <strong id="total-count">0</strong>
-              </div>
-            </div>
-
-            <button type="button" onclick="sendOrder()" class="btn-submit">
-              Zur Genehmigung senden
-            </button>
-          </div>
-        </aside>
       </div>
     </main>
 
@@ -223,11 +141,7 @@
         <p>&copy; 2016-2025 Oase Flensburg</p>
       </div>
     </footer>
-
-    <script src="../js/menu.js" defer></script>
     <script src="../js/animation.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://kit.fontawesome.com/5bb575665e.js"
       crossorigin="anonymous"

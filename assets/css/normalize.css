@@ -1,19 +1,18 @@
 /* Bacis settings */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
 :root {
-    --basic-font: font-family: "Quicksand", sans-serif;
-    --title-font: font-family: "Playfair Display", serif;
+  --basic-font: font-family: "Quicksand", sans-serif;
+  --title-font: font-family: "Playfair Display", serif;
 
-    --primary-red: #ec7782;
+  --primary-red: #ec7782;
 
-    --dark-text: #6b6969;
-    --light-text: #e8e6e3; /* Для текста на темном фоне */
-    --background-light: #F5F5F5; /* Светлый фон секций */
-    --background-white: #FFFFFF;
-    --background-dark: #191b1c; /* Темный фон (как в референсе) */
-    --background-darker: #111111; /* Еще темнее для футера */
-    --line: #525252;
-
+  --dark-text: #6b6969;
+  --light-text: #e8e6e3; /* Для текста на темном фоне */
+  --background-light: #f5f5f5; /* Светлый фон секций */
+  --background-white: #ffffff;
+  --background-dark: #191b1c; /* Темный фон (как в референсе) */
+  --background-darker: #111111; /* Еще темнее для футера */
+  --line: #525252;
 }
 
 .container {
@@ -23,28 +22,27 @@
 }
 
 .events_box {
-    opacity: 1;
-    max-height: 1000px; 
-    overflow: hidden;
-    transition: 
-        opacity 0.4s ease-in-out, 
-        max-height 0.6s ease-out; 
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-height 0.6s ease-out;
 }
 
 .events_box.hide {
-    opacity: 0; 
-    max-height: 0; 
-    padding-top: 0; 
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    pointer-events: none; 
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  pointer-events: none;
 }
 
 .events_box button.active {
   color: var(--primary-red);
 }
-
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -60,13 +58,14 @@ html {
   height: 100%;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  margin: 0;
+  padding: 0;
 }
 
-html.no-scroll, 
+html.no-scroll,
 body.no-scroll {
-    overflow: hidden !important; /* !! ИСПОЛЬЗУЕМ !important !! */
+  overflow: hidden !important; /* !! ИСПОЛЬЗУЕМ !important !! */
 }
-
 
 /* Sections
    ========================================================================== */
@@ -77,17 +76,22 @@ body.no-scroll {
 
 body {
   height: 100%;
-  margin: 0;
   background-color: var(--background-dark);
   font-family: "Quicksand", sans-serif;
 }
 
-p,a {
+p,
+a {
   text-decoration: none;
   font-weight: 500;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Playfair Display", serif;
 }
 
@@ -241,7 +245,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -251,7 +256,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
