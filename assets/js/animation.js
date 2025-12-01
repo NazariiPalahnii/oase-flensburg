@@ -12,34 +12,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.querySelector(".burger-menu");
   const nav = document.getElementById("main-nav");
   const body = document.body;
-  const html = document.documentElement; // Получаем элемент <html>
+  const html = document.documentElement;
 
   if (burgerMenu && nav) {
     const toggleScrollLock = () => {
-      // Переключаем класс на <body> и <html>
       body.classList.toggle("no-scroll");
       html.classList.toggle("no-scroll");
     };
 
-    // При клике на бургер
     burgerMenu.addEventListener("click", () => {
       burgerMenu.classList.toggle("is-open");
       nav.classList.toggle("is-open");
 
-      toggleScrollLock(); // Вызываем функцию блокировки
+      toggleScrollLock();
     });
 
-    // Закрываем меню и разблокируем прокрутку при нажатии на любой пункт меню
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        // Если меню открыто, закрываем его
         if (nav.classList.contains("is-open")) {
           burgerMenu.classList.remove("is-open");
           nav.classList.remove("is-open");
 
-          // Разблокируем прокрутку, если она была заблокирована
           if (body.classList.contains("no-scroll")) {
-            toggleScrollLock();
+            body.classList.remove("no-scroll");
+            html.classList.remove("no-scroll");
           }
         }
       });

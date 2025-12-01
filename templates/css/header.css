@@ -2,6 +2,12 @@
   --header-height: 90px;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 header {
   width: 100%;
   height: var(--header-height);
@@ -11,7 +17,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-
 
 .header__container {
   display: flex;
@@ -128,27 +133,30 @@ nav ul li a:hover {
 }
 
 @media (max-width: 900px) {
-  .burger-menu {
-    display: flex;
-  }
-
   nav {
-    /* Высота остается постоянной */
+    display: none;
+  }
+  
+  nav.is-open {
+    display: flex; 
+    
+    position: fixed; 
     top: var(--header-height);
-    left: -100%;
+    left: 0;
     width: 100%;
-    /* Используем постоянную высоту 90px */
     height: calc(100vh - var(--header-height)); 
     background-color: var(--background-dark);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    transition: left 0.3s ease-in-out;
+    
+    overflow-y: auto; 
+    z-index: 999;
   }
 
-  nav.is-open {
-    left: 0;
+  .burger-menu {
+    display: flex;
   }
 
   nav ul {
