@@ -7,11 +7,11 @@
   --primary-red: #ec7782;
 
   --dark-text: #6b6969;
-  --light-text: #e8e6e3; /* Для текста на темном фоне */
-  --background-light: #f5f5f5; /* Светлый фон секций */
+  --light-text: #e8e6e3; 
+  --background-light: #f5f5f5;
   --background-white: #ffffff;
-  --background-dark: #191b1c; /* Темный фон (как в референсе) */
-  --background-darker: #111111; /* Еще темнее для футера */
+  --background-dark: #191b1c; 
+  --background-darker: #111111; 
   --line: #525252;
 }
 
