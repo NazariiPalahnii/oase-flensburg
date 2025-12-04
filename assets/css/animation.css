@@ -1,14 +1,15 @@
-/* --- assets/css/animations.css --- */
+body {
+    overflow-x: hidden;
+}
 
 html {
-    scroll-behavior: smooth; /* Плавная прокрутка к якорям */
+    scroll-behavior: smooth;
 }
 
 a, button, .btn-primary, img {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 2. Эффекты для кнопок (подпрыгивание и тень) */
 .button:hover, .header-cta-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -19,10 +20,9 @@ a, button, .btn-primary, img {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* 3. Галерея (Зум картинки внутри рамки) */
 .image {
-    overflow: hidden; /* Чтобы картинка не вылезала */
-    border-radius: 8px; /* Немного скруглим углы */
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .image img {
@@ -33,10 +33,9 @@ a, button, .btn-primary, img {
 }
 
 .image:hover img {
-    transform: scale(1.08); /* Легкое увеличение */
+    transform: scale(1.08);
 }
 
-/* 4. "Крутка" иконок при наведении */
 .logo__contact:hover i, 
 .footer-social i:hover {
     transform: rotate(360deg) scale(1.2);
@@ -44,7 +43,6 @@ a, button, .btn-primary, img {
     transition: transform 0.5s ease, color 0.3s ease;
 }
 
-/* 6. Секция Hero - параллакс эффект для текста */
 .hero-left {
     perspective: 1000px;
 }

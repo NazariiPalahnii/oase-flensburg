@@ -1,9 +1,5 @@
 :root {
   --header-height: 90px;
-  --background-dark: #1a1a1a;
-  --primary-red: #e63946;
-  --light-text: #f1f1f1;
-  --dark-text: #333;
 }
 
 * {
@@ -162,6 +158,9 @@ nav ul li a:hover {
 @media (max-width: 900px) {
   .burger-menu {
     display: flex;
+    position: fixed; 
+    right: 20px; 
+    top: 33px;
   }
 
   nav {

@@ -44,6 +44,25 @@
   color: var(--primary-red);
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -58,7 +77,6 @@ html {
   height: 100%;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }

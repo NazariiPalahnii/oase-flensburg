@@ -56,14 +56,12 @@ main {
   box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
 }
 
-/* Сетка карточек */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
 }
 
-/* Карточка блюда */
 .dish-card {
   background: var(--background-dark) ;
   border-radius: 16px;
@@ -153,7 +151,7 @@ main {
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-/* --- Правая часть: Сайдбар --- */
+
 .sidebar {
   margin-top: 130px;
   flex: 1;
@@ -194,7 +192,7 @@ main {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
-  box-sizing: border-box; /* Чтобы padding не ломал ширину */
+  box-sizing: border-box; 
 }
 
 .divider {
@@ -210,7 +208,6 @@ main {
   padding-right: 5px;
 }
 
-/* Скроллбар для корзины */
 .cart-list::-webkit-scrollbar {
   width: 5px;
 }
@@ -301,11 +298,10 @@ main {
   transition: background 0.2s;
 }
 .btn-submit:hover {
-  background-color: #fa5252;
+  background-color: var(--primary-red);
 }
 
-/* Адаптивность */
-@media (max-width: 850px) {
+@media (max-width: 991px) {
   .container {
     flex-direction: column-reverse;
   }
