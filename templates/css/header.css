@@ -1,5 +1,5 @@
 :root {
-  --header-height: 90px;
+ --header-height: 90px;
 }
 
 * {
@@ -158,9 +158,6 @@ nav ul li a:hover {
 @media (max-width: 900px) {
   .burger-menu {
     display: flex;
-    position: fixed; 
-    right: 20px; 
-    top: 33px;
   }
 
   nav {

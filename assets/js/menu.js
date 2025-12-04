@@ -1,112 +1,49 @@
-// ================= ДАННЫЕ =================
 const menuDatabase = [
-  // --- Салаты ---
-  {
-    id: 1,
-    name: "Salad",
-    category: "salads",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet",
-    img: "https://placehold.co/300x200?text=Caesar",
-  },
-  {
-    id: 2,
-    name: "Salad2",
-    category: "salads",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Olivier",
-  },
-  {
-    id: 3,
-    name: "Salad3",
-    category: "salads",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Greek",
-  },
-  {
-    id: 4,
-    name: "Salad4",
-    category: "salads",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Greek",
-  },
-  {
-    id: 5,
-    name: "Salad5",
-    category: "salads",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Greek",
-  },
-
-  // --- Горячее ---
-  {
-    id: 6,
-    name: "Steak 1",
-    category: "main",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Ribeye",
-  },
-  {
-    id: 7,
-    name: "Steak 2",
-    category: "main",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Salmon",
-  },
-  {
-    id: 8,
-    name: "Steak 3",
-    category: "main",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Duck",
-  },
-  {
-    id: 9,
-    name: "Steak 4",
-    category: "main",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Pork+BBQ",
-  },
-  {
-    id: 10,
-    name: "Steak 5",
-    category: "main",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Beef",
-  },
-
-  // --- Гарниры ---
-  {
-    id: 11,
-    name: "Etwas",
-    category: "sides",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Fries",
-  },
-  {
-    id: 12,
-    name: "Etwas",
-    category: "sides",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    img: "https://placehold.co/300x200?text=Veggies",
-  },
+  { id: 1, name: "Salad Caesar", category: "salads", description: "Fresh salad with chicken.", img: "https://placehold.co/300x200" },
+  { id: 2, name: "Salad Olivier", category: "salads", description: "Traditional salad.", img: "https://placehold.co/300x200" },
+  { id: 6, name: "Steak Ribeye", category: "main", description: "Premium beef steak.", img: "https://placehold.co/300x200" },
+  { id: 7, name: "Grilled Salmon", category: "main", description: "Fresh salmon fillet.", img: "https://placehold.co/300x200" },
+  { id: 11, name: "French Fries", category: "sides", description: "Crispy fries.", img: "https://placehold.co/300x200" },
+  { id: 12, name: "Grilled Veggies", category: "sides", description: "Mix of vegetables.", img: "https://placehold.co/300x200" },
 ];
 
-// Состояние корзины
 let cart = {};
-let allDishElements = [];
 
-// ================= ФУНКЦИИ =================
+document.addEventListener('DOMContentLoaded', () => {
+    renderCategoryTabs();
+    renderMenu();
+    updateCartDisplay();
+    initBurgerMenu();
+});
 
-// 1. Создание кнопок категорий
+function initBurgerMenu() {
+    const burgerBtn = document.getElementById('burger-btn');
+    const nav = document.getElementById('main-nav');
+    
+    if (burgerBtn && nav) {
+        burgerBtn.addEventListener('click', () => {
+            burgerBtn.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerBtn.classList.remove('is-open');
+                nav.classList.remove('is-open');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
+}
+
 function renderCategoryTabs() {
-  const tabsContainer = document.getElementById("category-tabs");
+  const container = document.getElementById("category-tabs");
   const categories = [
     { key: "all", name: "Alles" },
     { key: "salads", name: "Salat" },
     { key: "main", name: "Steak" },
-    { key: "sides", name: "Etwas" },
+    { key: "sides", name: "Beilagen" },
   ];
 
   categories.forEach((cat) => {
@@ -114,49 +51,37 @@ function renderCategoryTabs() {
     btn.className = "category-btn";
     btn.textContent = cat.name;
     if (cat.key === "all") btn.classList.add("active");
-
     btn.onclick = (e) => filterMenu(cat.key, e.target);
-    tabsContainer.appendChild(btn);
+    container.appendChild(btn);
   });
 }
 
-// 2. Отрисовка блюд 
 function renderMenu() {
   const container = document.getElementById("menu-container");
   container.innerHTML = "";
-  allDishElements = [];
 
   menuDatabase.forEach((dish) => {
     const card = document.createElement("div");
     card.className = "dish-card";
     card.setAttribute("data-category", dish.category);
-
     card.innerHTML = `
-            <img src="${dish.img}" class="dish-img" alt="${dish.name}">
-            <div class="card-body">
-                <h3>${dish.name}</h3>
-                <p class="dish-desc">${dish.description}</p>
-                <div class="card-footer" style="justify-content: flex-end;">
-                    <button class="btn-add" onclick="addToCart(${dish.id})">
-                        <span>+ Auf Bestellung</span>
-                    </button>
-                </div>
-            </div>
-        `;
-
+      <img src="${dish.img}" class="dish-img" alt="${dish.name}">
+      <div class="card-body">
+        <h3>${dish.name}</h3>
+        <p class="dish-desc">${dish.description}</p>
+        <button class="btn-add" onclick="addToCart(${dish.id})">+ Hinzufügen</button>
+      </div>
+    `;
     container.appendChild(card);
-    allDishElements.push(card);
   });
 }
 
-// 3. Фильтрация
-function filterMenu(category, btnElement) {
-  document
-    .querySelectorAll(".category-btn")
-    .forEach((b) => b.classList.remove("active"));
-  btnElement.classList.add("active");
-
-  allDishElements.forEach((card) => {
+function filterMenu(category, btn) {
+  document.querySelectorAll(".category-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  
+  const cards = document.querySelectorAll(".dish-card");
+  cards.forEach(card => {
     if (category === "all" || card.getAttribute("data-category") === category) {
       card.style.display = "flex";
     } else {
@@ -165,10 +90,8 @@ function filterMenu(category, btnElement) {
   });
 }
 
-// 4. Логика корзины (ТОЛЬКО КОЛИЧЕСТВО)
 function addToCart(id) {
-  if (!cart[id]) cart[id] = 0;
-  cart[id]++;
+  cart[id] = (cart[id] || 0) + 1;
   updateCartDisplay();
 }
 
@@ -183,77 +106,55 @@ function removeFromCart(id) {
 function updateCartDisplay() {
   const list = document.getElementById("cart-items");
   list.innerHTML = "";
-
-  let totalItems = 0;
+  let total = 0;
 
   if (Object.keys(cart).length === 0) {
     list.innerHTML = '<div class="empty-cart">Der Warenkorb ist leer</div>';
   } else {
     for (const [id, qty] of Object.entries(cart)) {
-      const dish = menuDatabase.find((d) => d.id == id);
-      if (dish) {
-        totalItems += qty;
-
-        const item = document.createElement("div");
-        item.className = "cart-item";
-        item.innerHTML = `
-                    <div class="item-info">
-                        <span class="item-name">${dish.name}</span>
-                        <span class="item-calc">Menge: ${qty} st.</span>
-                    </div>
-                    <button class="btn-remove" onclick="removeFromCart(${id})">×</button>
-                `;
-        list.appendChild(item);
-      }
+      const dish = menuDatabase.find(d => d.id == id);
+      total += qty;
+      const item = document.createElement("div");
+      item.className = "cart-item";
+      item.innerHTML = `
+        <div class="item-info">
+            <span class="item-name">${dish.name}</span>
+            <span class="item-calc">${qty} st.</span>
+        </div>
+        <button class="btn-remove" onclick="removeFromCart(${id})">×</button>
+      `;
+      list.appendChild(item);
     }
   }
-
-  // Обновляем только счетчик блюд
-  document.getElementById("total-count").innerText = totalItems;
+  document.getElementById("total-count").innerText = total;
 }
 
-// 5. Отправка заказа (БЕЗ ЦЕН)
 function sendOrder() {
+  const form = document.getElementById("orderForm");
   const eventType = document.getElementById("eventType").value;
-  const eventDate = document.getElementById("eventDate").value;
-  const guestCount = document.getElementById("guestCount").value;
-  const userEmail = document.getElementById("userEmail").value;
+  const date = document.getElementById("eventDate").value;
+  const email = document.getElementById("userEmail").value;
+  const guests = document.getElementById("guestCount").value;
 
-  if (!eventDate || !userEmail) {
-    alert("Bitte geben Sie das Datum der Veranstaltung und die E-Mail-Adresse an.");
+  if (!date || !email) {
+    alert("Bitte füllen Sie alle Felder aus.");
     return;
   }
   if (Object.keys(cart).length === 0) {
-    alert("Ihr Warenkorb ist leer.");
+    alert("Warenkorb ist leer.");
     return;
   }
 
-  // Сборка списка только с количеством
-  let menuList = "";
-
+  let itemsText = "";
   for (const [id, qty] of Object.entries(cart)) {
-    const dish = menuDatabase.find((d) => d.id == id);
-    menuList += `- ${dish.name}: ${qty} st.%0D%0A`;
+    const dish = menuDatabase.find(d => d.id == id);
+    itemsText += `- ${dish.name}: ${qty} st.\n`;
   }
 
-  const companyEmail = "info@banket-service.ru";
-  const subject = `Заказ меню на ${eventDate} (${eventType})`;
-  const body =
-    `Здравствуйте!%0D%0A%0D%0A` +
-    `📝 ИНФОРМАЦИЯ О ЗАКАЗЕ:%0D%0A` +
-    `Повод: ${eventType}%0D%0A` +
-    `Дата: ${eventDate}%0D%0A` +
-    `Гостей: ${guestCount}%0D%0A` +
-    `Email: ${userEmail}%0D%0A%0D%0A` +
-    `🥗 ВЫБРАННЫЕ БЛЮДА:%0D%0A${menuList}%0D%0A` +
-    `-- Ждем согласования! --`;
+  const subject = encodeURIComponent(`Neue Bestellung: ${eventType} am ${date}`);
+  const body = encodeURIComponent(
+    `Anlass: ${eventType}\nDatum: ${date}\nGäste: ${guests}\nEmail: ${email}\n\nBestellung:\n${itemsText}`
+  );
 
-  window.location.href = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:info@oase-flensburg.de?subject=${subject}&body=${body}`;
 }
-
-// ЗАПУСК
-window.onload = () => {
-  renderCategoryTabs();
-  renderMenu();
-  updateCartDisplay();
-};

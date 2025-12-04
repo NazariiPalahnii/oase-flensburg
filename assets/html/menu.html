@@ -4,23 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Конструктор Меню</title>
-
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../templates/css/header.css" />
     <link rel="stylesheet" href="../../templates/css/footer.css" />
-
-    <link rel="stylesheet" href="../css/animation.css" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <header data-aos="fade-down" data-aos-once="true" data-aos-duration="1000">
+     <header>
       <div class="container header__container">
-    
         <div class="logo">
-          <a href="#logo">
-            <img src="../img/Oase-Flensburg-Logo-1024.png" alt="Oase Flensburg Logo" class="logo__img" />
+          <a href="../../index.html">
+            <img src="../img/Oase-Flensburg-Logo-1024.png" alt="Logo" class="logo__img" />
           </a>
         <div class="logo__contact">
           <i class="fa-solid fa-phone"></i>
@@ -31,6 +27,7 @@
           <p>Kielseng 30, 24937 Flensburg</p>
         </div>
         </div>
+        
         <nav id="main-nav">
         <ul>
           <li><a href="../../index.html#resturant">Restaurant</a></li>
@@ -38,11 +35,10 @@
           <li><a href="../../index.html#events">Veranstaltungen</a></li>
           <li><a href="../../index.html#news1">Betreuung</a></li>
         </ul>
-
         <a href="../html/menu.html" class="header-cta-btn">Buchungsanfrage</a>
       </nav>
 
-      <button class="burger-menu" aria-label="Menü öffnen" aria-expanded="false">
+      <button class="burger-menu" id="burger-btn" aria-label="Menü öffnen">
         <span class="burger-menu__line"></span>
         <span class="burger-menu__line"></span>
         <span class="burger-menu__line"></span>
@@ -51,40 +47,20 @@
   </header>
 
     <main>
-      <div class="container">
+      <div class="container main-layout">
         <div class="menu-section">
           <div class="menu-header">
-            <h1 data-aos="fade-right" data-aos-duration="800">
-              Buchungsanfrage
-            </h1>
-            <p
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="800"
-            >
-              Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer
-              Bestellung hinzu.
+            <h1 data-aos="fade-right">Buchungsanfrage</h1>
+            <p data-aos="fade-right" data-aos-delay="200">
+              Wählen Sie eine Kategorie aus und fügen Sie dann Gerichte zu Ihrer Bestellung hinzu.
             </p>
           </div>
 
-          <div
-            class="category-tabs"
-            id="category-tabs"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="800"
-          ></div>
-
-          <div
-            class="menu-grid"
-            id="menu-container"
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-duration="800"
-          ></div>
+          <div class="category-tabs" id="category-tabs" data-aos="fade-up"></div>
+          <div class="menu-grid" id="menu-container" data-aos="fade-up" data-aos-delay="300"></div>
         </div>
 
-        <aside class="sidebar" data-aos="fade-left" data-aos-duration="1000">
+        <aside class="sidebar" data-aos="fade-left">
           <div class="sticky-cart">
             <div class="cart-header">
               <h2>Ihre Bestellung</h2>
@@ -92,13 +68,11 @@
 
             <form id="orderForm" class="order-form">
               <div class="form-group">
-                <label>Anlass (Feiertag):</label>
+                <label>Anlass:</label>
                 <select id="eventType">
                   <option value="Hochzeit">Hochzeit</option>
                   <option value="Geburtstag">Geburtstag</option>
-                  <option value="Firmenveranstaltung">
-                    Firmenveranstaltung
-                  </option>
+                  <option value="Firmenveranstaltung">Firmenveranstaltung</option>
                   <option value="Andere">Andere</option>
                 </select>
               </div>
@@ -108,22 +82,11 @@
               </div>
               <div class="form-group">
                 <label>Gäste:</label>
-                <input
-                  type="number"
-                  id="guestCount"
-                  min="1"
-                  value="10"
-                  required
-                />
+                <input type="number" id="guestCount" min="1" value="10" required />
               </div>
               <div class="form-group">
-                <label>Ihre Email:</label>
-                <input
-                  type="email"
-                  id="userEmail"
-                  placeholder="mail@example.com"
-                  required
-                />
+                <label>Email:</label>
+                <input type="email" id="userEmail" placeholder="mail@example.com" required />
               </div>
             </form>
 
@@ -148,13 +111,11 @@
         </aside>
       </div>
     </main>
-
-    <footer class="site-footer">
+        <footer class="site-footer">
       <div class="container footer-content-wrapper">
         <div
           class="footer-section footer-links"
-          data-aos="fade-up"
-          data-aos-delay="100"
+         data-aos="fade-up" data-aos-delay="100"
         >
           <h3>Die EAS</h3>
           <p>
@@ -202,9 +163,9 @@
             ></a>
           </div>
           <p class="footer-logo">
-            <a href="../index.html">
+            <a href="#logo">
               <img
-                src="../img/Oase-Flensburg-Logo-1024.png"
+                src="./assets/img/Oase-Flensburg-Logo-1024.png"
                 alt="logo"
                 class="logo__img"
               />
@@ -219,12 +180,8 @@
     </footer>
 
     <script src="../js/menu.js" defer></script>
-    <script src="../js/animation.js"></script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script
-      src="https://kit.fontawesome.com/5bb575665e.js"
-      crossorigin="anonymous"
-    ></script>
+    <script>AOS.init();</script>
+    <script src="https://kit.fontawesome.com/5bb575665e.js" crossorigin="anonymous"></script>
   </body>
 </html>
